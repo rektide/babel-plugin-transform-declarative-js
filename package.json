@@ -1,15 +1,15 @@
 {
-	"name": "media-engine",
+	"name": "babel-plugin-transform-declarative-js",
 	"version": "1.0.0",
-	"description": "",
-	"main": "build/article.js",
+	"description": "Hoist all the ExpressionStatement's values as an array, returned from an exported factory function",
+	"main": "build/index.js",
 	"scripts": {
-		"compile": "babel --plugins transform-es2015-modules-commonjs,transform-es2015-parameters,transform-es2015-destructuring article.js --out-dir build",
+		"compile": "babel --plugins transform-es2015-modules-commonjs,transform-es2015-parameters,transform-es2015-destructuring index.js --out-dir build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://archive.voodoowarez.com/media-engine"
+		"url": "https://archive.voodoowarez.com/babel-plugin-transform-declarative-js"
 	},
 	"author": "rektide de la faye",
 	"license": "X",
@@ -20,7 +20,6 @@
 		"babel-plugin-transform-es2015-destructuring": "^6.4.0",
 		"babel-plugin-transform-es2015-modules-commonjs": "^6.4.0",
 		"babel-plugin-transform-es2015-parameters": "^6.4.5",
-		"lodash": "^4.0.0",
 		"quasilon": "^1.0.1"
 	}
 }
