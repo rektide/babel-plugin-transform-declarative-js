@@ -1,6 +1,6 @@
 {
 	"name": "babel-plugin-transform-declarative-js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Hoist all the ExpressionStatement's values as an array, returned from an exported factory function",
 	"main": "build/index.js",
 	"scripts": {

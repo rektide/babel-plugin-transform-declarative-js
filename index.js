@@ -33,7 +33,8 @@ export default function({ options }) {
 					module.exports= function(){
 						${path.node.body}
 						return ${arr}
-					}`
+					}
+					module.exports.default= module.exports`
 				path.node.body= val.ast.program.body
 			}
 		}
