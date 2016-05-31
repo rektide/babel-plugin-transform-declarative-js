@@ -13,17 +13,16 @@ export default function({ options }) {
 
 				var returnIdentifiers= []
 				for(var i= 0; i< path.node.body.length; ++i){
-					var
-					  node= path.node.body[i]
+					var node= path.node.body[i]
 					if(!t.isExpressionStatement(node)){
 						continue
 					}
-					var
-					  uid= path.scope.generateUidIdentifier("captureMe"),
-					  declarator= t.variableDeclarator(uid, node.expression),
-					  declaration= t.variableDeclaration("const", [declarator])
-					path.node.body[i]= declaration
+					var uid= path.scope.generateUidIdentifier("notebook")
 					returnIdentifiers.push(uid)
+					var expressionized = quasilon`
+						const ${uid} = ${node.expression}
+					`
+					path.node.body[i] = expressionized.ast.program.body
 				}
 
 
