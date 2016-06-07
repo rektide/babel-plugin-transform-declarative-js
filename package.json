@@ -1,9 +1,10 @@
 {
-	"name": "babel-plugin-transform-declarative-js",
-	"version": "1.0.1",
+	"name": "babel-plugin-notebookjs",
+	"version": "1.0.2",
 	"description": "Hoist all the ExpressionStatement's values as an array, returned from an exported factory function",
 	"main": "build/index.js",
 	"scripts": {
+		"postinstall": "npm run compile",
 		"compile": "babel --plugins transform-es2015-modules-commonjs,transform-es2015-parameters,transform-es2015-destructuring index.js --out-dir build",
 		"test": "mkdir -p build/fixture; cd .test; babel --plugins babel-plugin-transform-declarative-js fixture/paragraph.js > ../build/fixture/paragraph.js"
 	},
