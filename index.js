@@ -22,9 +22,8 @@ export default function({ options }) {
 					var expressionized = quasilon`
 						const ${uid} = ${node.expression}
 					`
-					path.node.body[i] = expressionized.ast.program.body
+					path.node.body[i] = expressionized.ast.program.body[0]
 				}
-
 
 				var
 				  arr= t.arrayExpression(returnIdentifiers),

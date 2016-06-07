@@ -5,7 +5,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"compile": "babel --plugins transform-es2015-modules-commonjs,transform-es2015-parameters,transform-es2015-destructuring index.js --out-dir build",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "mkdir -p build/fixture; cd .test; babel --plugins babel-plugin-transform-declarative-js fixture/paragraph.js > ../build/fixture/paragraph.js"
 	},
 	"repository": {
 		"type": "git",
